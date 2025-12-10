@@ -2,7 +2,6 @@ import prisma from '@/lib/client';
 import { auth } from '@clerk/nextjs/server';
 import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react'
 
 export default async function ProfileCard({ type }: {
     type: "home" | "profile"
@@ -61,7 +60,7 @@ export default async function ProfileCard({ type }: {
 
                 {type === "home" ?
                     <Link href={`/profile/${user.username}`}>
-                        <button className="cursor-pointer p-2 w-full rounded-xl bg-gradient-to-r from-blue-500 to-purple-600 text-white font-medium shadow hover:opacity-90 transition">
+                        <button className="cursor-pointer p-2 w-full rounded-xl bg-linear-to-r from-blue-500 to-purple-600 text-white font-medium shadow hover:opacity-90 transition">
                             My Profile
                         </button>
                     </Link> :

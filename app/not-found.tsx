@@ -1,11 +1,8 @@
-"use client";
-
 import Link from 'next/link'
-import React from 'react'
 
-const NotFound = () => {
+export default function NotFound() {
     return (
-        <div className='h-[86vh] w-full flex flex-col items-center justify-center gap-4'>
+        <div className='h-screen w-full flex flex-col items-center justify-center gap-4'>
             <h2 className='text-2xl font-bold'>
                 PAGE NOT FOUND
             </h2>
@@ -22,5 +19,3 @@ const NotFound = () => {
         </div>
     )
 }
-
-export default NotFound

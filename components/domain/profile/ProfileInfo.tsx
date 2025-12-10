@@ -1,11 +1,11 @@
 import prisma from '@/lib/client';
 import { auth } from '@clerk/nextjs/server';
-import { User } from '@prisma/client'
-import React from 'react'
+import { User } from '@prisma/client';
 import { GrLocation } from 'react-icons/gr';
 import { MdDateRange } from 'react-icons/md';
 import UpdateProfile from './UpdateProfile';
 import Link from 'next/link';
+import FollowUnfollow from '../follow/FollowUnfollow';
 
 export default async function ProfileInfo({ user }: {
     user?: User
@@ -92,6 +92,15 @@ export default async function ProfileInfo({ user }: {
                         <MdDateRange /> Joined {formattedDate}
                     </span>
                 </div>
+
+                {currentUserId && currentUserId !== user?.id && (
+                    <FollowUnfollow
+                        userId={user?.id}
+                        isUserBlocked={isUserBlocked}
+                        isFollowing={isFollowing}
+                        isFollowingSent={isFollowingSent}
+                    />
+                )}
             </div>
         </div>
     )

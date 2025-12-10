@@ -1,12 +1,11 @@
 import LeftMenus from '@/components/layout/LeftMenus'
-import prisma from '../../../lib/client'
 import { auth } from '@clerk/nextjs/server'
 import Image from 'next/image'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
-import React from 'react'
 import AllPosts from '@/components/domain/post/AllPosts'
 import RightMenus from '@/components/layout/RightMenus'
+import prisma from '@/lib/client'
 
 export default async function Profile({ params }: {
   params: Promise<{ username: string }>

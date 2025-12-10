@@ -3,7 +3,7 @@
 import { deletePost, likePost } from '@/lib/action';
 import { useAuth } from '@clerk/nextjs';
 import Image from 'next/image';
-import React, { useOptimistic, useState } from 'react';
+import { useOptimistic, useState } from 'react';
 import { MdDeleteOutline } from "react-icons/md";
 
 export default function PostInteraction({

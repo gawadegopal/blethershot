@@ -4,7 +4,7 @@ import { User } from '@prisma/client'
 import { CldUploadWidget } from 'next-cloudinary';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
-import React, { useActionState, useState } from 'react'
+import { useActionState, useState } from 'react'
 import { useFormStatus } from 'react-dom';
 import { MdOutlineCancel } from "react-icons/md";
 
@@ -33,7 +33,7 @@ export default function UpdateProfile({ user }: {
             >
                 Update
             </span>
-            
+
             {open && (
                 <div className="absolute w-full h-full top-0 left-0 p-4 bg-white/70 flex items-center justify-center z-50 text-[#111827]">
                     <form
@@ -137,7 +137,7 @@ export default function UpdateProfile({ user }: {
                         </div>
 
                         <button
-                            className="cursor-pointer p-2 mt-2 w-full rounded-xl bg-gradient-to-r from-blue-500 to-purple-600 text-white font-medium shadow hover:opacity-90 transition disabled:cursor-not-allowed"
+                            className="cursor-pointer p-2 mt-2 w-full rounded-xl bg-linear-to-r from-blue-500 to-purple-600 text-white font-medium shadow hover:opacity-90 transition disabled:cursor-not-allowed"
                             disabled={pending}
                         >
                             {pending ? "Updating..." : "Update"}
