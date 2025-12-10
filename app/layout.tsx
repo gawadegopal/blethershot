@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
 import { Open_Sans } from "next/font/google";
-import Navbar from "./components/layout/Navbar";
-import Scroll from "./components/ui/Scroll";
+import Scroll from "@/components/ui/Scroll";
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
   title: "Blethershot",
@@ -29,6 +30,14 @@ export default function RootLayout({
           <nav className="w-full bg-white/70 backdrop-blur-xl border-b border-[#e5e7eb] shadow-[0_8px_24px_rgba(0,0,0,0.06)] px-2 md:px-4 lg:px-8 xl:px-16 2xl:px-32 fixed z-20">
             <Navbar />
           </nav>
+
+          <main className="bg-linear-to-br from-gray-100 to-gray-200 pt-20 px-4 md:px-8 lg:px-16 xl:px-32 2xl:px-58 min-h-screen">
+            {children}
+          </main>
+
+          <footer className="w-full bg-linear-to-br from-blue-500 to-purple-600 text-white px-2 md:px-4 lg:px-8 xl:px-16 2xl:px-32">
+            <Footer />
+          </footer>
         </body>
       </html>
     </ClerkProvider>

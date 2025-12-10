@@ -15,11 +15,13 @@ export default async function Navbar() {
             </Link>
 
             {user &&
-                <div className='w-[50%] hidden md:flex items-center justify-center'>
-                    <Link href={'/'} className='flex items-center justify-center text-lg gap-2 cursor-pointer'>
-                        <FaHouseChimney />
-                        Home
-                    </Link>
+                <div className="w-[50%] hidden md:flex text-md items-center justify-between">
+                    <div className="flex gap-4 items-center">
+                        <Link href="/" className="flex items-center justify-start gap-1">
+                            <FaHouseChimney />
+                            <span>Home</span>
+                        </Link>
+                    </div>
                 </div>
             }
 
