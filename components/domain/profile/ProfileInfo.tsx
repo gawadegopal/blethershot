@@ -57,13 +57,9 @@ export default async function ProfileInfo({ user }: {
             <div className="flex items-center justify-between text-[#111827] text-xl font-medium">
                 <span>User Information</span>
 
-                {currentUserId === user?.id ? (
+                {currentUserId === user?.id &&
                     <UpdateProfile user={user} />
-                ) : (
-                    <Link href="/" className="text-[#3b82f6] text-sm">
-                        See all
-                    </Link>
-                )}
+                }
             </div>
 
             <div className="flex flex-col gap-2 text-[#4b5563]">

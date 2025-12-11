@@ -84,7 +84,7 @@ export default async function Profile({ params }: {
                 : user.username}
             </h1>
 
-            <div className="flex items-center gap-2 m-2">
+            <div className="flex items-center gap-2 m-2 text-black">
               <div className="flex flex-col items-center w-24">
                 <span className="font-medium">{user._count.posts}</span>
                 <span className="text-sm">Posts</span>
